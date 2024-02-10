@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Lemon&family=Poppins:wght@200;300;400;500;600;700&family=Quicksand:wght@300;400;600;700&family=Roboto:ital,wght@0,400;0,700;0,900;1,300;1,500;1,700;1,900&family=Rubik:wght@400;500;600;700;800&display=swap");
+
+*,
+body,
+html {
+  padding: 0;
+  margin: 0;
+}
+.mainContainer::before {
+  content: "";
+  position: absolute;
+  background-color: rgba(255, 250, 250, 0.1);
+  clip-path: circle(50% at 50% 50%);
+  height: 150px;
+  width: 150px;
+  top: 10%;
+  left: -15%;
+  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(-20px);
+  animation: movePoverty-before 60s ease-in-out infinite; /* 4s duration, infinite loop */
+}
+.mainContainer::after {
+  content: "";
+  position: absolute;
+  background-color: rgba(255, 250, 250, 0.1);
+  clip-path: circle(50% at 50% 50%);
+  height: 150px;
+  width: 150px;
+  bottom: -20px;
+  right: -60px;
+  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.7);
+  animation: movePoverty 60s ease-in-out infinite; /* 4s duration, infinite loop */
+}
+@keyframes movePoverty {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0px, -300px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes movePoverty-before {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0px, 320px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.grandContainer {
+  background-image: linear-gradient(
+    to right top,
+    #95b9ed,
+    #82b4ed,
+    #6bafed,
+    #4daaec,
+    #12a6eb
+  );
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.mainContainer {
+  position: relative;
+  background: rgba(255, 255, 255, 0.2);
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  width: 350px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(22px);
+  box-shadow: 3px 3px 20px 3px rgba(0, 0, 0, 0.073);
+  .grandContainer {
+    background-image: linear-gradient(
+      to right top,
+      #95b9ed,
+      #82b4ed,
+      #6bafed,
+      #4daaec,
+      #12a6eb
+    );
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .mainContainer {
+    position: relative;
+    background: rgba(255, 255, 255, 0.2);
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 350px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(1px);
+    box-shadow: 3px 3px 20px 3px rgba(0, 0, 0, 0.073);
+  }
+}
+
+/* input  */
+input {
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid rgba(255, 250, 250, 0.5);
+  outline: none;
+  padding: 10px 25px;
+  caret-color: rgba(255, 250, 250, 0.9);
+  margin: 40px 0px 10px 20px;
+  color: rgba(255, 250, 250, 0.8);
+  font-weight: 400;
+  font-family: "Rubik", sans-serif;
+  position: relative;
+  /* font-size: 1.1em; */
+}
+.github-icon {
+  color: rgba(255, 250, 250, 0.7);
+  font-size: 1.3em;
+  position: absolute;
+  left: 210px;
+  top: 43px;
+}
+input::placeholder {
+  color: rgba(255, 250, 250, 0.7);
+  font-size: 1.1em;
+}
+.errorMsg {
+  text-align: center;
+  margin-top: 40%;
+  color: rgb(233, 52, 52);
+  font-size: 1.2em;
+  font-weight: 400;
+  font-family: "Rubik", sans-serif;
+}
+.inputData button {
+  padding: 12px 18px;
+  margin-left: 10px;
+  margin-right: 5px;
+  background-color: rgba(255, 250, 250, 0.7);
+  color: #12a6eb;
+  border: none;
+  border-radius: 5px;
+  font-weight: 200;
+  font-family: "Rubik", sans-serif;
+  cursor: pointer;
+}
+/* info data */
+.infoData {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.infoData h1 {
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 10px;
+  font-size: 2.8em;
+  margin-top: 5%;
+  color: rgba(255, 250, 250, 0.8);
+  font-weight: 600;
+  font-family: "Rubik", sans-serif;
+  text-wrap: wrap;
+  overflow-wrap: break-word;
+  /* text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.267) ; */
+}
+.weatherIcon {
+  color: rgba(255, 250, 250, 0.8);
+  font-size: 5em;
+  margin-top: 20px;
+}
+.infoData h3 {
+  color: rgba(255, 250, 250, 0.8);
+  font-size: 1.8rem;
+  font-weight: 600;
+  font-family: "Rubik", sans-serif;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.221);
+}
+
+.max-min {
+  display: flex;
+  color: rgba(255, 250, 250, 0.9);
+  margin-top: 80px;
+  gap: 30px;
+  font-weight: 200;
+  font-family: "Rubik", sans-serif;
+}
+.min {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid rgba(255, 250, 250, 0.7);
+  padding-right: 20px;
+}
+.max {
+  display: flex;
+  flex-direction: column;
+}
+.min-max-text {
+  font-size: 1.1em;
+  font-weight: 500;
+}
+@media only screen and (max-width: 370px) {
+  .mainContainer {
+    height: 400px;
+    width: 250px;
+  }
+
+  .mainContainer::before {
+    height: 120px;
+    width: 120px;
+  }
+  .mainContainer::after {
+    height: 120px;
+    width: 120px;
+  }
+
+  .github-icon {
+    color: rgba(255, 250, 250, 0.7);
+    font-size: 1.2em;
+    position: absolute;
+    left: 150px;
+    top: 35px;
+  }
+  .inputData button {
+    padding: 8px 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  input {
+    padding: 0px 0px;
+  }
+  input::placeholder {
+    color: rgba(255, 250, 250, 0.7);
+    font-size: 1em;
+  }
+
+  .infoData h1 {
+    font-size: 2em;
+    margin-top: 10%;
+  }
+  .max-min {
+    margin-top: 40px;
+  }
+  .min-max-text {
+    font-size: 0.9em;
+    font-weight: 500;
+  }
+}
